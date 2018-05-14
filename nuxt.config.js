@@ -20,11 +20,13 @@ const routes = [
   },
 ];
 
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const basePath = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/';
+
 module.exports = {
   router: {
     mode: 'history',
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/',
+    base: basePath,
     routes: routes,
   },
   /*
@@ -54,7 +56,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/_nuxt/',
+    publicPath: basePath,
     babel: {
       plugins: [
         ["transform-imports", {
