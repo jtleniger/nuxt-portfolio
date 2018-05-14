@@ -1,7 +1,34 @@
-const nodeExternals = require('webpack-node-externals')
-const resolve = (dir) => require('path').join(__dirname, dir)
+/*
+ * Created by Martin Dünkelmann on 14.05.18 20:29
+ * Copyright (c) 2018. All rights reserved.
+ *
+ * Last modified 14.05.18 18:41
+ */
+
+const nodeExternals = require('webpack-node-externals');
+
+const routes = [
+  {
+    name: 'index',
+    path: 'index',
+    component: 'pages/index.vue'
+  },
+  {
+    name: 'inspire',
+    path: 'inspire',
+    component: 'pages/inspire.vue'
+  },
+];
+
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/';
 
 module.exports = {
+  router: {
+    mode: 'history',
+    base: routerBase,
+    routes: routes,
+  },
   /*
   ** Headers of the page
   */
@@ -29,6 +56,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    //publicPath: 'https://example.github.io/example2/',
     babel: {
       plugins: [
         ["transform-imports", {
@@ -64,4 +92,4 @@ module.exports = {
       }
     }
   }
-}
+};

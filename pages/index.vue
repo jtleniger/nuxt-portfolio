@@ -13,7 +13,7 @@
         class="text-xs-center"
       >
         <img
-          src="/static/v.png"
+          src="/v.png"
           alt="Vuetify.js"
           class="mb-5"
         >
@@ -76,10 +76,10 @@
         <v-card-actions>
           <v-spacer/>
           <v-btn
+            :to="{name: 'inspire'}"
             color="primary"
             flat
             nuxt
-            to="/inspire"
           >
             Continue
           </v-btn>

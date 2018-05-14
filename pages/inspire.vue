@@ -9,7 +9,7 @@
   <v-layout>
     <v-flex text-xs-center>
       <img
-        src="/static/v.png"
+        src="/v.png"
         alt="Vuetify.js"
         class="mb-5">
       <blockquote class="blockquote">
