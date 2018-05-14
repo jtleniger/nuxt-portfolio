@@ -1,3 +1,10 @@
+<!--
+  - Created by Martin Dünkelmann on 14.05.18 20:09
+  - Copyright (c) 2018. All rights reserved.
+  -
+  - Last modified 14.05.18 18:41
+  -->
+
 <template>
   <v-app dark>
     <v-navigation-drawer
@@ -9,28 +16,32 @@
     >
       <v-list>
         <v-list-tile
-          router
+          v-for="(item, i) in items"
           :to="item.to"
           :key="i"
-          v-for="(item, i) in items"
+          router
           exact
         >
           <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
+            <v-icon v-html="item.icon"/>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title v-text="item.title"/>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-side-icon @click="drawer = !drawer"></v-toolbar-side-icon>
+    <v-toolbar
+      :clipped-left="clipped"
+      fixed
+      app
+    >
+      <v-toolbar-side-icon @click="drawer = !drawer"/>
       <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
       >
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"/>
       </v-btn>
       <v-btn
         icon
@@ -44,8 +55,8 @@
       >
         <v-icon>remove</v-icon>
       </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-toolbar-title v-text="title"/>
+      <v-spacer/>
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
@@ -59,9 +70,9 @@
       </v-container>
     </v-content>
     <v-navigation-drawer
-      temporary
       :right="right"
       v-model="rightDrawer"
+      temporary
       fixed
     >
       <v-list>
@@ -73,13 +84,17 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
+    <v-footer
+      :fixed="fixed"
+      app
+    >
       <span>&copy; 2017</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+  // noinspection JSUnusedGlobalSymbols
   export default {
     data () {
       return {
