@@ -1,6 +1,6 @@
 # nuxt-starter
 
-> Nuxt.js + Vuetify.js project
+> Nuxt.js + Vuetify.js + Google Material Icons project template
 
 ## Build Setup
 
