@@ -33,13 +33,13 @@ module.exports = {
   head: {
     title: 'nuxt-starter',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js + Vuetify.js project' }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: 'Nuxt.js + Vuetify.js project'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'}
     ]
   },
   plugins: ['~/plugins/vuetify.js'],
@@ -49,13 +49,13 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {color: '#3B8070'},
   /*
   ** Build configuration
   */
   build: {
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-    publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/_nuxt/',
+    publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'https://martinx3.github.io/nuxt-starter/' : '/_nuxt/',
     babel: {
       plugins: [
         ["transform-imports", {
@@ -73,7 +73,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
