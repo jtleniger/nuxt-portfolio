@@ -56,7 +56,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '/',
+    publicPath: '',
     babel: {
       plugins: [
         ["transform-imports", {
