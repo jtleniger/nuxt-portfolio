@@ -1,9 +1,9 @@
 {
-  "name": "nuxt-starter",
+  "name": "jtleniger-nuxt-portfolio",
   "version": "1.0.0",
-  "description": "Nuxt.js + Vuetify.js + Google Material Icons project template",
-  "author": "Martin Dünkelmann <nc-duenkekl3@netcologne.de>",
-  "homepage": "https://martinx3.github.io/",
+  "description": "Nuxt.js + Vuetify.js + Google Material Icons Portfolio",
+  "author": "Justin Leniger",
+  "homepage": "https://justinleniger.com",
   "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "scripts": {

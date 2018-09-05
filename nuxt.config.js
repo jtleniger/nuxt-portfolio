@@ -1,37 +1,10 @@
-/*
- * Created by Martin Dünkelmann on 14.05.18 20:29
- * Copyright (c) 2018. All rights reserved.
- *
- * Last modified 14.05.18 18:41
- */
-
 const nodeExternals = require('webpack-node-externals');
 
-const routes = [
-  {
-    name: 'index',
-    path: 'index',
-    component: 'pages/index.vue'
-  },
-  {
-    name: 'inspire',
-    path: 'inspire',
-    component: 'pages/inspire.vue'
-  },
-];
-
 module.exports = {
-  router: {
-    mode: 'history',
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-    base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/nuxt-starter/' : '/',
-    routes: routes,
-  },
   /*
   ** Headers of the page
   */
   head: {
-    title: 'nuxt-starter',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -54,8 +27,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-    publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'https://martinx3.github.io/nuxt-starter/' : '/_nuxt/',
     babel: {
       plugins: [
         ["transform-imports", {

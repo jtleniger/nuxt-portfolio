@@ -15,3 +15,18 @@
     </v-footer>
   </v-app>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      title: 'Justin Leniger'
+    }
+  },
+  head () {
+    return {
+      title: this.title
+    }
+  }
+}
+</script>
