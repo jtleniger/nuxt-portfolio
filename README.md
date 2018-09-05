@@ -1,7 +1,4 @@
-[![Build Status](https://travis-ci.org/MartinX3/nuxt-starter.svg?branch=master)](https://travis-ci.org/MartinX3/nuxt-starter)
-# nuxt-starter
-
-> Nuxt.js + Vuetify.js + Google Material Icons project template
+> Nuxt.js + Vuetify.js + Google Material Icons Portfolio
 
 ## Build Setup
 
