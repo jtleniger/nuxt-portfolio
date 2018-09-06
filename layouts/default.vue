@@ -1,8 +1,13 @@
 <template>
   <v-app dark>
-
+    <v-toolbar dark>
+      <v-toolbar-title>Justin Leniger</v-toolbar-title>
+    </v-toolbar>
     <v-content>
-      <v-container>
+      <v-container
+        class="pa-0"
+        fluid
+      >
         <nuxt />
       </v-container>
     </v-content>

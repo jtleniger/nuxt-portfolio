@@ -1,39 +1,159 @@
 <template>
   <v-layout
     column
-    justify-center
-    align-center
-    fill-height
   >
+
     <v-flex
-      class="container"
       xs12
-      fill-height
-      justify-center
-      column
     >
-      <h1 class="display-4 text-xs-centered">Hello! My name is Justin.</h1>
-      <p>
-        Small batch street art letterpress ugh four loko chambray pitchfork 3 wolf moon neutra pork belly. Post-ironic kickstarter intelligentsia vexillologist iPhone, green juice street art hella photo booth williamsburg chartreuse butcher. Ramps tattooed copper mug, tbh salvia before they sold out pork belly tumblr single-origin coffee etsy DIY man braid umami green juice cornhole. Fashion axe craft beer fam plaid taxidermy.
-
-        XOXO iPhone shoreditch bicycle rights. Shoreditch gastropub lomo meditation, selvage asymmetrical brooklyn poutine austin actually. Everyday carry hella semiotics fam skateboard vinyl tacos wayfarers air plant pinterest health goth trust fund. Woke vinyl taxidermy twee forage.
-
-        Schlitz tousled venmo pug, whatever taiyaki irony. Chicharrones williamsburg bitters, seitan squid echo park gastropub cliche tbh. Bushwick DIY lyft, mixtape godard hexagon you probably haven't heard of them locavore gentrify edison bulb vaporware yr kale chips. Gluten-free thundercats ramps, bitters twee man bun microdosing truffaut. Kickstarter tilde street art, bushwick four dollar toast tofu ethical. Dreamcatcher farm-to-table before they sold out chartreuse 90's, lo-fi taxidermy vexillologist vaporware cliche tofu heirloom snackwave vice. Green juice taxidermy ugh umami bitters, seitan mumblecore activated charcoal salvia taiyaki sartorial hot chicken pok pok live-edge.
-
-        Tilde pitchfork twee palo santo vaporware. Next level cliche polaroid locavore subway tile 90's pitchfork selfies helvetica scenester truffaut. Lomo VHS deep v tacos succulents prism master cleanse crucifix. Plaid post-ironic stumptown, kombucha prism knausgaard jean shorts locavore put a bird on it master cleanse tattooed tumeric yuccie four loko. Normcore you probably haven't heard of them palo santo pickled scenester neutra literally. Raw denim cray kickstarter deep v.
-
-        Normcore af selfies squid cliche poke air plant messenger bag. Echo park microdosing poutine ennui whatever pop-up pinterest mlkshk fanny pack pok pok occupy asymmetrical forage. Edison bulb before they sold out kale chips, sustainable kinfolk kitsch poke church-key. Gastropub vaporware man braid hot chicken four loko bitters.
-      </p>
+      <v-parallax
+        :src="require('@/assets/panorama.jpg')"
+        height="500"
+      >
+        <v-layout
+          column
+          align-center
+          justify-center
+        >
+          <h1 class="mb-2 display-4 text-xs-center">Hello! I'm Justin.</h1>
+          <div class="subheading mb-3 text-xs-center">I'm a software developer, and wannabe outdoorsman.</div>
+        </v-layout>
+      </v-parallax>
     </v-flex>
+
+    <v-container>
+      <v-layout
+        column
+        wrap
+        align-center
+        class="my-5"
+      >
+        <v-flex
+          xs12
+          sm4
+          class="my-3"
+        >
+          <div class="text-xs-center">
+            <h2 class="headline">The best way to start developing</h2>
+            <span class="subheading">
+              Cras facilisis mi vitae nunc 
+            </span>
+          </div>
+        </v-flex>
+
+        <v-flex
+          xs12
+        >
+          <v-container
+            grid-list-xl
+          >
+            <v-layout
+              row
+              wrap
+              align-center
+            >
+              <v-flex
+                xs12
+                md4
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-xs-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2"
+                    >
+                      color_lens
+                    </v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline text-xs-center">Material Design</div>
+                  </v-card-title>
+                  <v-card-text>
+                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex
+                xs12
+                md4
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-xs-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2"
+                    >
+                      flash_on
+                    </v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline">Fast development</div>
+                  </v-card-title>
+                  <v-card-text>
+                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex
+                xs12
+                md4
+              >
+                <v-card class="elevation-0 transparent">
+                  <v-card-text class="text-xs-center">
+                    <v-icon
+                      x-large
+                      class="blue--text text--lighten-2">build</v-icon>
+                  </v-card-text>
+                  <v-card-title
+                    primary-title
+                    class="layout justify-center"
+                  >
+                    <div class="headline text-xs-center">Completely Open Sourced</div>
+                  </v-card-title>
+                  <v-card-text>
+                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        </v-flex>
+
+        <v-flex
+          xs12
+          class="my-3"
+        >
+          <p class="text-cs-center">
+            Cloud bread affogato +1 hammock photo booth tumblr. Plaid cred flexitarian succulents four dollar toast pok pok 3 wolf moon venmo edison bulb hot chicken kombucha air plant helvetica keytar godard. XOXO keytar hexagon edison bulb tumeric cold-pressed. La croix cred actually intelligentsia DIY copper mug green juice lumbersexual PBR&B vegan ennui letterpress heirloom tousled. Live-edge listicle tumblr echo park drinking vinegar forage truffaut. Vexillologist stumptown microdosing listicle actually gastropub, health goth tofu edison bulb farm-to-table tumblr flannel. Lyft yuccie mlkshk 3 wolf moon ennui.
+
+            Polaroid trust fund scenester, fanny pack unicorn cliche semiotics vice small batch everyday carry. Bespoke photo booth activated charcoal pitchfork lomo, glossier gentrify crucifix butcher street art flexitarian hammock locavore plaid. Pabst unicorn church-key biodiesel scenester poke. Church-key pug lumbersexual bushwick pork belly, enamel pin viral beard four dollar toast raclette freegan hammock glossier art party. Cliche enamel pin tbh put a bird on it salvia.
+
+            Quinoa 90's godard tofu polaroid whatever blog biodiesel YOLO taxidermy marfa vaporware keffiyeh XOXO heirloom. Hashtag vice hella thundercats, chia 90's brooklyn truffaut brunch pop-up yuccie. Tote bag chia vexillologist crucifix pork belly. Godard poutine biodiesel gluten-free selvage. Everyday carry live-edge church-key, marfa 90's bitters af scenester roof party yuccie vinyl unicorn salvia hella.
+
+            Fashion axe butcher pork belly af occupy single-origin coffee. Williamsburg fam pinterest selvage dreamcatcher artisan green juice marfa stumptown activated charcoal brooklyn gochujang humblebrag tote bag godard. Chillwave put a bird on it synth kickstarter semiotics thundercats brunch migas lumbersexual taxidermy mustache next level poke prism. Mlkshk PBR&B selfies sriracha. Ugh mlkshk pabst ethical edison bulb.
+
+            Gastropub snackwave tilde try-hard glossier. Hashtag intelligentsia locavore shoreditch tumeric woke farm-to-table aesthetic. Whatever iceland post-ironic, activated charcoal adaptogen mumblecore kombucha ennui 3 wolf moon hell of bicycle rights lo-fi lumbersexual retro disrupt. Skateboard cliche microdosing vinyl chambray tbh blog kogi single-origin coffee. Artisan neutra helvetica pug, everyday carry etsy post-ironic raclette enamel pin messenger bag chia.
+          </p>
+        </v-flex> 
+      </v-layout>
+    </v-container>
+
   </v-layout>
 </template>
 
 <style scoped>
-  .container {
-    background-image:url('/panorama.jpg');
-    background-repeat:no-repeat;
-    background-size: 100%;
-    background-position:center;
-  }
+
 </style>
 
