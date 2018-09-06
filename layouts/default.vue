@@ -1,8 +1,11 @@
 <template>
   <v-app dark>
-
+    
     <v-content>
-      <v-container>
+      <v-container
+        class="pa-0"
+        fluid
+      >
         <nuxt />
       </v-container>
     </v-content>
@@ -11,7 +14,8 @@
       fixed
       app
     >
-      <span>&copy; 2018, Justin Leniger</span>
+      <v-spacer />
+      <div class="pr-2">&copy; {{ new Date().getFullYear() }}, Justin Leniger</div>
     </v-footer>
   </v-app>
 </template>
