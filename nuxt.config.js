@@ -13,7 +13,7 @@ module.exports = {
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
       {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cabin:400,500,700'}
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Work+Sans'}
     ]
   },
   plugins: ['~/plugins/vuetify.js'],
