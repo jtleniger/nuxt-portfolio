@@ -1,8 +1,6 @@
 <template>
   <v-app dark>
-    <v-toolbar dark>
-      <v-toolbar-title>Justin Leniger</v-toolbar-title>
-    </v-toolbar>
+    
     <v-content>
       <v-container
         class="pa-0"
@@ -36,9 +34,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  * {
-    font-family: 'Cabin', sans-serif;
-  }
-</style>
