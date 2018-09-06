@@ -11,7 +11,8 @@
       fixed
       app
     >
-      <span>&copy; 2018, Justin Leniger</span>
+      <v-spacer />
+      <div class="pr-2">&copy; {{ new Date().getFullYear() }}, Justin Leniger</div>
     </v-footer>
   </v-app>
 </template>
@@ -30,3 +31,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  * {
+    font-family: 'Cabin', sans-serif;
+  }
+</style>
