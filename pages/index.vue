@@ -37,7 +37,7 @@
             <v-layout
               row
               wrap
-              align-center
+              align-start
             >
               <v-flex
                 xs12
