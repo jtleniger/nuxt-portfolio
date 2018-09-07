@@ -8,7 +8,7 @@
     >
       <v-parallax
         :src="require('@/assets/panorama.jpg')"
-        height="700"
+        :height="parallaxHeight"
       >
         <v-layout
           column
@@ -58,6 +58,11 @@
                   >
                     <div class="headline text-xs-center">Software Developer</div>
                   </v-card-title>
+                  <v-card-text class="text-xs-center">
+                    See my <a
+                      href="https://github.com/jtleniger"
+                      target="_blank">GitHub.</a>
+                  </v-card-text>
                 </v-card>
               </v-flex>
               <v-flex
@@ -79,6 +84,11 @@
                   >
                     <div class="headline text-xs-center">Amateur Photographer</div>
                   </v-card-title>
+                  <v-card-text class="text-xs-center">
+                    See my <a
+                      href="https://unsplash.com/@jtleniger"
+                      target="_blank">Unsplash.</a>
+                  </v-card-text>
                 </v-card>
               </v-flex>
               <v-flex
@@ -108,6 +118,22 @@
 
   </v-layout>
 </template>
+
+<script>
+export default {
+  computed: {
+    parallaxHeight () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return '400'
+        case 'sm': return '500'
+        case 'md': return '600'
+        case 'lg': return '700'
+        case 'xl': return '800'
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
   .headline-font {
