@@ -3,9 +3,11 @@
     <section class="hero is-dark is-large">
       <div class="hero-body">
         <div class="container">
-          <h1 class="title is-2 has-text-weight-bold">
-            Justin Leniger
-          </h1>
+          <div class="column is-half-mobile is-offset-half-mobile">
+            <h1 class="title is-size-2-mobile has-text-weight-bold has-text-right">
+              Justin Leniger
+            </h1>
+          </div>
         </div>
       </div>
     </section>
@@ -45,5 +47,13 @@
 <style lang="scss" scoped>
   .hero {
     background: url('~assets/images/me.jpg')center center; background-size:cover;
+  }
+
+  .title.has-text-weight-bold {
+    @media screen and (min-width: 769px) {
+      font-size: 6rem;
+    }
+
+    text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
   }
 </style>
