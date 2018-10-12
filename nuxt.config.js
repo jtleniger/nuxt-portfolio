@@ -1,66 +1,65 @@
-const nodeExternals = require('webpack-node-externals');
+const pkg = require('./package')
 
 module.exports = {
+  mode: 'universal',
+
   /*
   ** Headers of the page
   */
   head: {
+    title: 'Justin Leniger',
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Nuxt.js + Vuetify.js project'}
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Material+Icons'},
-      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Work+Sans'}
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
-  css: [
-    '~/assets/style/app.styl'
-  ],
+
   /*
-  ** Customize the progress bar color
+  ** Customize the progress-bar color
   */
-  loading: {color: '#3B8070'},
+  loading: { color: '#fff' },
+
+  /*
+  ** Global CSS
+  */
+  css: [
+  ],
+
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
+
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [,
+    // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    '@nuxtjs/bulma'
+  ],
+
   /*
   ** Build configuration
   */
   build: {
-    babel: {
-      plugins: [
-        ["transform-imports", {
-          "vuetify": {
-            "transform": "vuetify/es5/components/${member}",
-            "preventFullImport": true
-          }
-        }]
-      ]
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
     },
-    vendor: [
-      '~/plugins/vuetify.js'
-    ],
-    extractCSS: true,
     /*
-    ** Run ESLint on save
+    ** You can extend webpack config here
     */
     extend(config, ctx) {
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-      if (ctx.isServer) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^vuetify/]
-          })
-        ]
-      }
+      
     }
   }
-};
+}

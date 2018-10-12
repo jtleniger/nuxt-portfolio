@@ -1,156 +1,70 @@
 <template>
-  <v-layout
-    column
-  >
-
-    <v-flex
-      xs12
-    >
-      <v-parallax
-        :src="require('@/assets/panorama.jpg')"
-        :height="parallaxHeight"
-      >
-        <v-layout
-          column
-          align-center
-          justify-center
-        >
-          <h1 class="my-2 headline-font huge shadow text-xs-center">Justin Leniger</h1>
-        </v-layout>
-      </v-parallax>
-    </v-flex>
-
-    <v-container>
-      <v-layout
-        column
-        wrap
-        align-center
-        class="my-5"
-      >
-
-        <v-flex
-          xs12
-        >
-          <v-container
-            grid-list-xl
-          >
-            <v-layout
-              row
-              wrap
-              align-start
-            >
-              <v-flex
-                xs12
-                md4
-              >
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon
-                      x-large
-                      class="blue--text text--lighten-2"
-                    >
-                      code
-                    </v-icon>
-                  </v-card-text>
-                  <v-card-title
-                    primary-title
-                    class="layout justify-center"
-                  >
-                    <div class="headline text-xs-center">Software Developer</div>
-                  </v-card-title>
-                  <v-card-text class="text-xs-center">
-                    See my <a
-                      href="https://github.com/jtleniger"
-                      target="_blank">GitHub.</a>
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex
-                xs12
-                md4
-              >
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon
-                      x-large
-                      class="blue--text text--lighten-2"
-                    >
-                      photo_camera
-                    </v-icon>
-                  </v-card-text>
-                  <v-card-title
-                    primary-title
-                    class="layout justify-center"
-                  >
-                    <div class="headline text-xs-center">Amateur Photographer</div>
-                  </v-card-title>
-                  <v-card-text class="text-xs-center">
-                    See my <a
-                      href="https://unsplash.com/@jtleniger"
-                      target="_blank">Unsplash.</a>
-                  </v-card-text>
-                </v-card>
-              </v-flex>
-              <v-flex
-                xs12
-                md4
-              >
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon
-                      x-large
-                      class="blue--text text--lighten-2">terrain</v-icon>
-                  </v-card-text>
-                  <v-card-title
-                    primary-title
-                    class="layout justify-center"
-                  >
-                    <div class="headline text-xs-center">Outdoorsman</div>
-                  </v-card-title>
-                </v-card>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-flex>
-
-      </v-layout>
-    </v-container>
-
-  </v-layout>
+  <div>
+    <section class="hero is-dark is-large">
+      <div class="hero-body">
+        <div class="container">
+          <div class="column is-half-mobile is-offset-half-mobile">
+            <h1 class="title is-size-2-mobile has-text-weight-bold has-text-right">
+              Justin Leniger
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title has-text-centered"><i class="fas fa-code"></i>Software Developer</p>
+              <p>I write software both professionally and in my free time. The site is available on GitHub and was created using Nuxt.JS and Bulma.
+              <p class="has-text-grey has-text-centered margin-top">
+                <em>Find me on <a href="https://github.com/jtleniger" target="_blank">GitHub.</a></em>
+              </p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title has-text-centered"><i class="fas fa-camera"></i>Amateur Photographer</p>
+              <p>Pictures can share much more than a scene; they can share a feeling or tell a story. I love improving my skills in my freetime.</p>
+              <p class="has-text-grey has-text-centered margin-top">
+                <em>Find me on <a href="https://unsplash.com/@jtleniger" target="_blank">Unsplash.</a></em>
+              </p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <p class="title has-text-centered"><i class="fas fa-tree"></i>Outdoorsman</p>
+              <p>When I'm not at work I try to get into nature as much as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    parallaxHeight () {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return '400'
-        case 'sm': return '500'
-        case 'md': return '600'
-        case 'lg': return '700'
-        case 'xl': return '800'
+<style lang="scss" scoped>
+  .hero {
+    background: url('~assets/images/me.jpg')center center; background-size:cover;
+  }
+
+  .margin-top {
+    margin-top: 1rem;
+  }
+
+  .title {
+
+    i {
+      margin-right: 1rem;
+    }
+
+    &.has-text-weight-bold {
+      @media screen and (min-width: 769px) {
+        font-size: 6rem;
       }
+
+      text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
     }
   }
-}
-</script>
-
-<style scoped>
-  .headline-font {
-    line-height: 1;
-    font-weight: 300;
-    letter-spacing: -0.06em;
-  }
-
-  .huge {
-    font-size: 112px;
-  }
-
-  .shadow {
-    text-shadow:
-      0px 4px 4px rgba(0, 0, 0, 0.2),
-      2px 4px 4px rgba(0, 0, 0, 0.2),
-      -2px 4px 4px rgba(0, 0, 0, 0.2);
-  }
 </style>
-
