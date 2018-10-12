@@ -17,7 +17,7 @@
                 Home
               </a>
 
-              <a class="navbar-item">
+              <!-- <a class="navbar-item">
                 Resume
               </a>
 
@@ -31,7 +31,7 @@
                       Intervalometer
                     </a>
                   </div>
-              </div>
+              </div> -->
             </div>
         </div>
     </nav>

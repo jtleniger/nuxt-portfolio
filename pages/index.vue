@@ -17,25 +17,25 @@
           <div class="tile is-parent">
             <div class="tile is-child box">
               <p class="title has-text-centered"><i class="fas fa-code"></i>Software Developer</p>
-              <p>
-                Marfa selvage sustainable, brooklyn paleo skateboard tacos venmo mumblecore farm-to-table. Irony deep v leggings roof party, gentrify polaroid franzen swag locavore. Humblebrag meditation crucifix vexillologist chillwave. Poutine asymmetrical mustache, taxidermy fingerstache photo booth franzen kombucha. Enamel pin pug offal freegan salvia tattooed fashion axe.
+              <p>I write software both professionally and in my free time. The site is available on GitHub and was created using Nuxt.JS and Bulma.
+              <p class="has-text-grey has-text-centered margin-top">
+                <em>Find me on <a href="https://github.com/jtleniger" target="_blank">GitHub.</a></em>
               </p>
             </div>
           </div>
           <div class="tile is-parent">
             <div class="tile is-child box">
               <p class="title has-text-centered"><i class="fas fa-camera"></i>Amateur Photographer</p>
-              <p>
-                Shoreditch readymade mumblecore, street art waistcoat glossier distillery kale chips cliche iPhone chillwave whatever vape drinking vinegar. La croix lomo you probably haven't heard of them viral adaptogen, umami affogato blog XOXO raclette small batch. Polaroid iPhone tote bag whatever schlitz mustache before they sold out aesthetic post-ironic live-edge cred. Palo santo hot chicken coloring book snackwave.
+              <p>Pictures can share much more than a scene; they can share a feeling or tell a story. I love improving my skills in my freetime.</p>
+              <p class="has-text-grey has-text-centered margin-top">
+                <em>Find me on <a href="https://unsplash.com/@jtleniger" target="_blank">Unsplash.</a></em>
               </p>
             </div>
           </div>
           <div class="tile is-parent">
             <div class="tile is-child box">
               <p class="title has-text-centered"><i class="fas fa-tree"></i>Outdoorsman</p>
-              <p>
-                Put a bird on it before they sold out next level, tote bag venmo humblebrag +1 kinfolk vexillologist edison bulb. Pork belly ethical pour-over gastropub 8-bit. Kinfolk tacos helvetica 8-bit four loko waistcoat pug everyday carry mumblecore actually flannel listicle. Flexitarian 8-bit microdosing, single-origin coffee godard pok pok taxidermy small batch tilde messenger bag. Occupy tacos authentic chicharrones raclette chia roof party celiac offal ethical. Hella tumeric franzen, listicle vexillologist shoreditch taxidermy normcore whatever slow-carb. Church-key kombucha chia before they sold out intelligentsia.
-              </p>
+              <p>When I'm not at work I try to get into nature as much as possible.</p>
             </div>
           </div>
         </div>
@@ -47,6 +47,10 @@
 <style lang="scss" scoped>
   .hero {
     background: url('~assets/images/me.jpg')center center; background-size:cover;
+  }
+
+  .margin-top {
+    margin-top: 1rem;
   }
 
   .title {
