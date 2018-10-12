@@ -17,7 +17,7 @@
           <div class="tile is-parent">
             <div class="tile is-child box">
               <p class="title has-text-centered"><i class="fas fa-code"></i>Software Developer</p>
-              <p>I write software both professionally and in my free time. The site is available on GitHub and was created using Nuxt.JS and Bulma.
+              <p>I write software both professionally and in my free time. This site is available on GitHub and was created using Nuxt.JS and Bulma.
               <p class="has-text-grey has-text-centered margin-top">
                 <em>Find me on <a href="https://github.com/jtleniger" target="_blank">GitHub.</a></em>
               </p>
