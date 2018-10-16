@@ -48,23 +48,4 @@
   .hero {
     background: url('~assets/images/me.jpg')center center; background-size:cover;
   }
-
-  .margin-top {
-    margin-top: 1rem;
-  }
-
-  .title {
-
-    i {
-      margin-right: 1rem;
-    }
-
-    &.has-text-weight-bold {
-      @media screen and (min-width: 769px) {
-        font-size: 6rem;
-      }
-
-      text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
-    }
-  }
 </style>

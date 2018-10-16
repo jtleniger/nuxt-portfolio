@@ -13,13 +13,11 @@
         <div class="navbar-menu" :class="{ 'is-active': showNav }">
             <div class="navbar-start">
 
-              <a class="navbar-item">
-                Home
-              </a>
+              <nuxt-link class="navbar-item" to="/">Home</nuxt-link>
 
               <!-- <a class="navbar-item">
                 Resume
-              </a>
+              </a> -->
 
               <div class="navbar-item has-dropdown is-hoverable">
                   <a class="navbar-link">
@@ -27,11 +25,9 @@
                   </a>
 
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">
-                      Intervalometer
-                    </a>
+                    <nuxt-link class="navbar-item" to="/projects/intervalometer">Intervalometer</nuxt-link>
                   </div>
-              </div> -->
+              </div>
             </div>
         </div>
     </nav>
@@ -57,3 +53,24 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .margin-top {
+    margin-top: 1rem;
+  }
+
+  .title {
+
+    i {
+      margin-right: 1rem;
+    }
+
+    &.has-text-weight-bold {
+      @media screen and (min-width: 769px) {
+        font-size: 6rem;
+      }
+
+      text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
+    }
+  }
+</style>
