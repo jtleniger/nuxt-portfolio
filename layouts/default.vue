@@ -32,7 +32,9 @@
         </div>
     </nav>
 
-    <nuxt/>
+    <div @click="showNav = false">
+      <nuxt/>
+    </div>
 
     <footer class="footer">
       <div class="content has-text-centered">
@@ -50,13 +52,18 @@ export default {
     return {
       showNav: false
     }
+  },
+  watch: {
+    '$route' () {
+      this.showNav = false;
+    }
   }
 }
 </script>
 
 <style lang="scss">
   .margin-top {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
 
   .title {
