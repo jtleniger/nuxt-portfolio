@@ -16,7 +16,10 @@
                 <div class="tile is-ancestor">
                     <div class="tile is-parent">
                         <div class="tile is-child box">
-                            <p class="has-text-grey">
+                            <p>
+                                <span class="tag is-medium">October 16, 2018</span>
+                            </p>
+                            <p class="has-text-grey margin-top">
                                 <em>
                                     This project's source code is available on <a href="https://github.com/jtleniger/rpi-timelapse-ui" target="_blank">GitHub.</a>
                                     My implementation uses a Rasberry Pi Model 3 B+, and pictured is the wonderful Zebra Black Ice case available from C4 Labs.
@@ -76,9 +79,16 @@
                             </p>
                             <div class="column">
                                 <figure class="image is-16by9">
-                                    <img src="~assets/images/andromeda.jpg" alt="Intervalometer UI">
+                                    <img src="~assets/images/andromeda.jpg" alt="Andromeda">
                                 </figure>
                             </div>
+                            <h3 class="title is-size-5 margin-top">
+                                Future Improvements
+                            </h3>
+                            <p>
+                                In the long run, I plan to add some mid-run previews to the UI. Additionally, I'd like to incorporate a full-width half-maximum calculation
+                                similar to software like BackyardEOS as a focus assist, as well as plate solving to ensure my camera is pointed at the right part of the sky.
+                            </p>
                         </div>
                     </div>
                 </div>
