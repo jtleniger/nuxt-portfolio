@@ -26,6 +26,7 @@
 
                   <div class="navbar-dropdown">
                     <nuxt-link class="navbar-item" to="/projects/intervalometer">Intervalometer</nuxt-link>
+                    <nuxt-link class="navbar-item" to="/projects/alpha">Project Name</nuxt-link>
                   </div>
               </div>
             </div>
