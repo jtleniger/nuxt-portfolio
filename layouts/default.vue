@@ -42,6 +42,9 @@
         <p>
           ©{{ new Date().getFullYear() }}, Justin Leniger
         </p>
+        <a href="https://bulma.io">
+          <img src="https://bulma.io/images/made-with-bulma--black.png" alt="Made with Bulma" width="128" height="24">
+        </a>
       </div>
     </footer>
   </div>

@@ -72,7 +72,6 @@ module.exports = {
 
   sitemap: {
     hostname: 'https://justinleniger.com',
-    gzip: true,
-    generate: true
+    gzip: true
   }
 }
