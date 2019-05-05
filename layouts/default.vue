@@ -29,6 +29,16 @@
                     <a href="https://tldr.photography/" class="navbar-item">TL;DR Photography</a>
                   </div>
               </div>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link">
+                    Thoughts
+                  </a>
+
+                  <div class="navbar-dropdown">
+                    <nuxt-link class="navbar-item" to="/thoughts/knowability">Knowability</nuxt-link>
+                  </div>
+              </div>
             </div>
         </div>
     </nav>
