@@ -37,6 +37,7 @@
 
                   <div class="navbar-dropdown">
                     <nuxt-link class="navbar-item" to="/thoughts/knowability">Knowability</nuxt-link>
+                    <nuxt-link class="navbar-item" to="/thoughts/wewere">We Were</nuxt-link>
                   </div>
               </div>
             </div>
