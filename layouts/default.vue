@@ -25,6 +25,7 @@
                   </a>
 
                   <div class="navbar-dropdown">
+                    <nuxt-link class="navbar-item" to="/projects/suburban-safari">The Suburban Safari</nuxt-link>
                     <nuxt-link class="navbar-item" to="/projects/intervalometer">Intervalometer</nuxt-link>
                     <a href="https://tldr.photography/" class="navbar-item">TL;DR Photography</a>
                   </div>
@@ -37,7 +38,6 @@
 
                   <div class="navbar-dropdown">
                     <nuxt-link class="navbar-item" to="/thoughts/knowability">Knowability</nuxt-link>
-                    <nuxt-link class="navbar-item" to="/thoughts/wewere">We Were</nuxt-link>
                   </div>
               </div>
             </div>
@@ -77,22 +77,21 @@ export default {
 </script>
 
 <style lang="scss">
-  .margin-top {
-    margin-top: 1.5rem;
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.title {
+  i {
+    margin-right: 1rem;
   }
 
-  .title {
-
-    i {
-      margin-right: 1rem;
+  &.has-text-weight-bold {
+    @media screen and (min-width: 769px) {
+      font-size: 6rem;
     }
 
-    &.has-text-weight-bold {
-      @media screen and (min-width: 769px) {
-        font-size: 6rem;
-      }
-
-      text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
-    }
+    text-shadow: 0 4px 4px rgba(0,0,0,.3), 2px 4px 4px rgba(0,0,0,.3), -2px 4px 4px rgba(0,0,0,.3);
   }
+}
 </style>

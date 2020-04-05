@@ -15,11 +15,12 @@
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/sitemap": "^2.1.0",
     "cross-env": "^7.0.2",
-    "nuxt": "^2.12.0"
+    "nuxt": "^2.12.0",
+    "vue-gallery": "^2.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11",
     "sass-loader": "^7.1.0"
   }
 }
