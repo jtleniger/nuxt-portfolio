@@ -13,14 +13,22 @@
     </section>
     <section class="section">
       <div class="container">
-        <v-gallery :images="images" :index="index" @close="index = null" />
-        <div
-          class="image"
-          v-for="(image, imageIndex) in images"
-          :key="imageIndex"
-          @click="index = imageIndex"
-          :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
-        ></div>
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <div class="gallery-container">
+                <v-gallery :images="images" :index="index" @close="index = null" />
+                <div
+                  class="image"
+                  v-for="(image, imageIndex) in images"
+                  :key="imageIndex"
+                  @click="index = imageIndex"
+                  :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -43,8 +51,11 @@ export default {
 </script>
 
 <style scoped>
+  .gallery-container {
+    display: flex;
+    justify-content: center;
+  }
   .image {
-    float: left;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
