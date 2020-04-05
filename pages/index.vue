@@ -46,6 +46,6 @@
 
 <style lang="scss" scoped>
   .hero {
-    background: url('~assets/images/me.jpg')center center; background-size:cover;
+    background: url('~assets/images/orion.jpg')center center; background-size:cover;
   }
 </style>
