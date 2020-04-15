@@ -1,0 +1,122 @@
+@import '~/scss/colors';
+@import '~/scss/sizes';
+
+$sans: 'Nunito', sans-serif;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+html {
+    color: $grey-400;
+}
+
+body {
+    background-color: $dark-background;
+    font-family: $sans;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $purple-800;
+    outline: none;
+    transition: color 150ms ease;
+
+    &:hover {
+        color: $purple-900;
+    }
+}
+
+em {
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .page {
+        width: $page-width-sm;
+
+        @media (min-width: $screen-sm) {
+            width: $page-width-lg;
+        }
+
+        background-color: $background;
+
+        .body {
+            margin: 3em;
+        }
+    }
+}
+
+.hero {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding: 20rem 5rem;
+    
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.cards {
+    @media (min-width: $screen-sm) {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }   
+
+    div {
+        padding: 1em;
+        margin: 1em;
+        text-align: center;
+    }
+}
+
+.posts {
+    padding: 1rem;
+
+    @media (min-width: $screen-sm) {
+        padding: 1rem 5rem;
+    }    
+
+    .post {
+
+        a {
+            display: block;
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: $grey-500;
+
+            &:hover {
+                color: $grey-400;
+            }
+        }
+
+        border-bottom: 1px solid $grey-900;
+
+        em {
+            display: block;
+            color: $grey-600;
+            margin: 1rem 0;
+        }
+    }
+}

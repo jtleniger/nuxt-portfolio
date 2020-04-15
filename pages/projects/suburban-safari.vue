@@ -1,21 +1,21 @@
 <template>
   <div>
-    <section class="hero is-dark is-medium">
-      <div class="hero-body">
-        <div class="container">
-          <div class="column">
+    <section>
+      <div>
+        <div>
+          <div>
             <h1
-              class="title is-size-2-mobile has-text-weight-bold has-text-right-mobile"
+             
             >Suburban Safari</h1>
           </div>
         </div>
       </div>
     </section>
-    <section class="section">
-      <div class="container">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child box">
+    <section>
+      <div>
+        <div>
+          <div>
+            <div>
               <div class="gallery-container">
                 <v-gallery :images="images" :index="index" @close="index = null" />
                 <div
@@ -23,7 +23,7 @@
                   v-for="(image, imageIndex) in images"
                   :key="imageIndex"
                   @click="index = imageIndex"
-                  :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
+                  :style="{ backgroundImage: 'url(' + image + ')', width: '200px', height: '200px' }"
                 ></div>
               </div>
             </div>

@@ -1,0 +1,12 @@
+$screen-sm: 768px;
+
+$page-width-lg: 85%;
+$page-width-sm: 100%;
+
+@mixin page-width() {
+    width: $page-width-sm;
+
+    @media (min-width: $screen-sm) {
+        width: $page-width-lg;
+    }
+}
