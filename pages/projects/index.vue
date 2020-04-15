@@ -1,6 +1,5 @@
 <template>
   <div class="body">
-    <h1>Latest</h1>
     <div class="posts">
       <div class="post">
         <nuxt-link to="/projects/suburban-safari">Suburban Safari</nuxt-link>

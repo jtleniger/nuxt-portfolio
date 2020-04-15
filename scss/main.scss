@@ -69,7 +69,9 @@ h1 {
         background-color: $background;
 
         .body {
-            margin: 3em;
+            @media (min-width: $screen-sm) {
+                margin: 3em;
+            }
 
             article {
                 margin: 1em;
@@ -81,7 +83,7 @@ h1 {
             section {
                 max-width: 960px;
                 margin: 0 auto;
-                padding: 1rem 0;
+                padding: 1rem;
                 &:not(:last-child) {
                     border-bottom: 1px solid $grey-900;
                 }
@@ -103,7 +105,8 @@ h1 {
     width: 100%;
     background-size: cover;
     background-position: center center;
-    padding: 20rem 5rem;
+    padding: 5rem;
+    height: 60vh;
     
     h1 {
         font-size: 5rem;

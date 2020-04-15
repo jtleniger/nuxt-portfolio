@@ -5,25 +5,31 @@
       <em>April 5, 2020</em>
       <p>A photographic exploration of suburbia in the quarantine of Spring 2020. Join me.</p>
     </section>
-    <section>
-      <div class="gallery-container">
-        <v-gallery :images="images" :index="index" @close="index = null" />
-        <div
-          class="image"
-          v-for="image in 6"
-          :key="image"
-          @click="index = image"
-          :style="{ backgroundImage: 'url(/images/suburban-safari/' + image + '.jpg)', width: '300px', height: '300px' }"
-        ></div>
-      </div>
-    </section>
+    <div class="gallery-container">
+      <v-gallery :images="images" :index="index" @close="index = null" />
+      <div
+        class="image"
+        v-for="(path, i) in images"
+        :key="i"
+        @click="index = i"
+        :style="{ backgroundImage: `url(${path})` }"
+      ></div>
+    </div>
   </div>
 </template>
 
 <script>
+const IMAGE_COUNT = 6;
+
 export default {
+  created() {
+    for (let i = 1; i <= IMAGE_COUNT; i++) {
+      this.images.push(`/images/suburban-safari/${i}.jpg`)
+    }
+  },
   data: function() {
     return {
+      images: [],
       index: null
     };
   }
@@ -34,6 +40,7 @@ export default {
 .gallery-container {
   display: flex;
   justify-content: center;
+  margin: 1em 0;
   flex-wrap: wrap;
 }
 .image {
@@ -41,5 +48,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
   margin: 1px;
+  width: 350px;
+  height: 350px;
 }
 </style>
