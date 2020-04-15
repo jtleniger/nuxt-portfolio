@@ -23,6 +23,13 @@ body {
     padding: 0;
 }
 
+.page-enter-active, .page-leave-active {
+    transition: opacity 100ms ease;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
 a {
     text-decoration: none;
     color: $purple-800;
@@ -63,6 +70,31 @@ h1 {
 
         .body {
             margin: 3em;
+
+            article {
+                margin: 1em;
+                border-radius: .25em;
+                background-color: $grey-900;
+                padding: 1em;
+            }
+
+            section {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 1rem 0;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $grey-900;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 90vh;
+                width: auto;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
         }
     }
 }
@@ -103,7 +135,7 @@ h1 {
         a {
             display: block;
             font-size: 2rem;
-            margin: 1rem 0;
+            margin: 2rem 0;
             color: $grey-500;
 
             &:hover {
@@ -111,12 +143,14 @@ h1 {
             }
         }
 
-        border-bottom: 1px solid $grey-900;
+        &:not(:last-child) {
+            border-bottom: 1px solid $grey-900;
+        }
 
         em {
             display: block;
             color: $grey-600;
-            margin: 1rem 0;
+            margin: 2rem 0;
         }
     }
 }
