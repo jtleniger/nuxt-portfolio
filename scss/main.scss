@@ -1,0 +1,159 @@
+@import '~/scss/colors';
+@import '~/scss/sizes';
+
+$sans: 'Nunito', sans-serif;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+html {
+    color: $grey-400;
+}
+
+body {
+    background-color: $dark-background;
+    font-family: $sans;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity 100ms ease;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $purple-800;
+    outline: none;
+    transition: color 150ms ease;
+
+    &:hover {
+        color: $purple-900;
+    }
+}
+
+em {
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .page {
+        width: $page-width-sm;
+
+        @media (min-width: $screen-sm) {
+            width: $page-width-lg;
+        }
+
+        background-color: $background;
+
+        .body {
+            @media (min-width: $screen-sm) {
+                margin: 3em;
+            }
+
+            article {
+                margin: 1em;
+                border-radius: .25em;
+                background-color: $grey-900;
+                padding: 1em;
+            }
+
+            section {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $grey-900;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 90vh;
+                width: auto;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    }
+}
+
+.hero {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    padding: 5rem;
+    height: 60vh;
+    
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+.cards {
+    @media (min-width: $screen-sm) {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }   
+
+    div {
+        padding: 1em;
+        margin: 1em;
+        text-align: center;
+    }
+}
+
+.posts {
+    padding: 1rem;
+
+    @media (min-width: $screen-sm) {
+        padding: 1rem 5rem;
+    }    
+
+    .post {
+
+        a {
+            display: block;
+            font-size: 2rem;
+            margin: 2rem 0;
+            color: $grey-500;
+
+            &:hover {
+                color: $grey-400;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $grey-900;
+        }
+
+        em {
+            display: block;
+            color: $grey-600;
+            margin: 2rem 0;
+        }
+    }
+}

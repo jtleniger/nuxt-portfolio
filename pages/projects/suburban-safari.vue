@@ -1,49 +1,35 @@
 <template>
-  <div>
-    <section class="hero is-dark is-medium">
-      <div class="hero-body">
-        <div class="container">
-          <div class="column">
-            <h1
-              class="title is-size-2-mobile has-text-weight-bold has-text-right-mobile"
-            >Suburban Safari</h1>
-          </div>
-        </div>
-      </div>
+  <div class="body">
+    <section>
+      <h1>Suburban Safari</h1>
+      <em>April 5, 2020</em>
+      <p>A photographic exploration of suburbia in the quarantine of Spring 2020. Join me.</p>
     </section>
-    <section class="section">
-      <div class="container">
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child box">
-              <div class="gallery-container">
-                <v-gallery :images="images" :index="index" @close="index = null" />
-                <div
-                  class="image"
-                  v-for="(image, imageIndex) in images"
-                  :key="imageIndex"
-                  @click="index = imageIndex"
-                  :style="{ backgroundImage: 'url(' + image + ')', width: '300px', height: '200px' }"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="gallery-container">
+      <v-gallery :images="images" :index="index" @close="index = null" />
+      <div
+        class="image"
+        v-for="(path, i) in images"
+        :key="i"
+        @click="index = i"
+        :style="{ backgroundImage: `url(${path})` }"
+      ></div>
+    </div>
   </div>
 </template>
 
 <script>
-const baseDir = '/images/suburban-safari/';
+const IMAGE_COUNT = 6;
 
 export default {
+  created() {
+    for (let i = 1; i <= IMAGE_COUNT; i++) {
+      this.images.push(`/images/suburban-safari/${i}.jpg`)
+    }
+  },
   data: function() {
     return {
-      images: [
-        `${baseDir}01.jpg`,
-        `${baseDir}02.jpg`,
-      ],
+      images: [],
       index: null
     };
   }
@@ -51,15 +37,18 @@ export default {
 </script>
 
 <style scoped>
-  .gallery-container {
-    display: flex;
-    justify-content: center;
-  }
-  .image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 1px solid #ebebeb;
-    margin: 5px;
-  }
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 1px;
+  width: 350px;
+  height: 350px;
+}
 </style>
