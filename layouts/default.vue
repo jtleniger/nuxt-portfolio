@@ -21,7 +21,7 @@
 @import '~/scss/sizes';
 
 nav {
-  background-color: $purple-900;
+  background: linear-gradient(45deg, #562d55, #414d72);
   padding: 1rem;
   font-size: 1.25rem;
 
