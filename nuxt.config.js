@@ -30,7 +30,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~plugins/vue-gallery.client.js'
+    { src: '~plugins/vue-gallery.client.js', ssr: false }
   ],
 
   /*
