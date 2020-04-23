@@ -3,8 +3,7 @@
     <div class="container">
       <nav>
         <nuxt-link class="home" to="/">Home</nuxt-link>
-        <nuxt-link to="/projects">Projects</nuxt-link>
-        <nuxt-link to="/thoughts">Thoughts</nuxt-link>
+        <nuxt-link to="/posts">Posts</nuxt-link>
       </nav>
       <section class="page">
         <nuxt />
