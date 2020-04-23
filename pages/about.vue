@@ -29,7 +29,7 @@
       </div>
     </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 body h1 {
   margin: 1rem 2rem;
 }
