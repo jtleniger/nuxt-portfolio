@@ -1,7 +1,8 @@
 <template>
   <div class="body">
     <section>
-      <h1>{{post.title}}</h1>
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.description }}</p>
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
     <section v-if="post.thumbnail">
