@@ -18,7 +18,7 @@ export default {
     }
     else {
       return {
-        post: await require(`~/assets/content/post/${params.post}.json`)
+        post: await require(`~/assets/content/posts/${params.post}.json`)
       }
     }
   }

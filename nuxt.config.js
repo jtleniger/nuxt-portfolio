@@ -33,6 +33,19 @@ module.exports = {
     { src: '~plugins/vue-gallery.client.js', ssr: false }
   ],
 
+  generate: {
+    routes: function() {
+      const fs = require('fs');
+      const path = require('path');
+      return fs.readdirSync('./assets/content/posts').map(file => {
+        return {
+          route: `/posts/${path.parse(file).name}`, // Return the slug
+          payload: require(`./assets/content/posts/${file}`),
+        };
+      });
+    },
+  },
+
   /*
   ** Nuxt.js modules
   */
