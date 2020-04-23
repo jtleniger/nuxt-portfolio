@@ -24,7 +24,7 @@ const IMAGE_COUNT = 6;
 export default {
   created() {
     for (let i = 1; i <= IMAGE_COUNT; i++) {
-      this.images.push(`/images/suburban-safari/${i}.jpg`)
+      this.images.push(`/img/suburban-safari/${i}.jpg`)
     }
   },
   data: function() {

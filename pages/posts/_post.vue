@@ -21,6 +21,14 @@ export default {
         post: await require(`~/assets/content/posts/${params.post}.json`)
       }
     }
+  },
+  head() {
+    return {
+      meta: [
+        { property: 'og:title', content: this.post.title },
+        { property: 'og:image', content: this.post.thumbnail }
+      ]
+    }
   }
 };
 </script>
