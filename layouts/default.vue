@@ -4,11 +4,13 @@
       <nav>
         <nuxt-link class="home" to="/">Home</nuxt-link>
         <nuxt-link to="/posts">Posts</nuxt-link>
+        <nuxt-link to="/about">About</nuxt-link>
       </nav>
       <section class="page">
         <nuxt />
       </section>
       <footer>
+        <p><a href="https://youtu.be/omjoa3pPpcY" target="_blank"><em>don't throw fruit at a computer</em></a></p>
         <p>©{{ new Date().getFullYear() }}, Justin Leniger</p>
       </footer>
     </div>

@@ -3,38 +3,49 @@
     <section class="hero">
       <h1>Justin Leniger</h1>
     </section>
-    <section>
-      <div class="cards">
-        <div>
-          <h1>Software Developer</h1>
-          <p>
-            I write software both professionally and in my free time. This site is on my
-            <a
-              href="https://github.com/jtleniger"
-              target="_blank"
-            >GitHub.</a>
-          </p>
-        </div>
-        <div>
-          <h1>Amateur Photographer</h1>
-          <p>
-            Pictures can share much more than a scene; they can share a feeling or tell a story. I love improving my skills in my freetime. Check out my
-            <a
-              href="https://unsplash.com/@jtleniger"
-              target="_blank"
-            >Unsplash.</a>
-          </p>
-        </div>
-        <div>
-          <h1>Outdoorsman</h1>
-          <p>When I'm not at work I try to get into nature as much as possible.</p>
+    <div class="body">
+      <h2>Latest Post</h2>
+      <div class="posts">
+        <div class="post">
+          <nuxt-link :to="`/posts/${latest.slug}`">{{ latest.title }}</nuxt-link>
+          <p>{{ latest.description }}</p>
+          <em>{{ new Date(latest.date).toLocaleDateString() }}</em>
         </div>
       </div>
-    </section>
+      <h2>Projects</h2>
+      <div class="posts">
+        <div class="post">
+          <nuxt-link to="/projects/suburban-safari">Suburban Safari</nuxt-link>
+          <p>Join me on an adventure.</p>
+        </div>
+        <div class="post">
+          <nuxt-link to="https://tldr.photography">tldr.photography</nuxt-link>
+          <p>How the heck do I use my DSLR?</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.container .page .body {
+
+  h2 {
+    font-weight: 300;
+    padding: 1rem;
+  }
+
+  .posts {
+    flex-grow: 1;
+
+    .post {
+      a {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
 .hero {
   background-image: url("/img/orion.jpg");
 }
@@ -46,8 +57,17 @@ export default {
     return {
       script: [
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
+      ],
+      meta: [
+        { property: 'og:title', content: 'Justin Leniger' },
+        { property: 'og:image', content: '/img/orion.jpg' }
       ]
     };
+  },
+  computed: {
+    latest() {
+      return this.$store.state.posts[0];
+    }
   }
 };
 </script>

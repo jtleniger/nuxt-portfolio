@@ -54,6 +54,10 @@ h1 {
     font-size: 2rem;
 }
 
+section:not(:last-child) {
+    border-bottom: 1px solid $grey-900;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -87,9 +91,6 @@ h1 {
                 max-width: 960px;
                 margin: 0 auto;
                 padding: 1rem;
-                &:not(:last-child) {
-                    border-bottom: 1px solid $grey-900;
-                }
             }
 
             img {
@@ -105,7 +106,7 @@ h1 {
 }
 
 blockquote {
-    background-color: #222;
+    background-color: $grey-900;
     padding: 0.1em 1em;
     border-radius: 0.5em;
     margin: 1em 0;
@@ -143,7 +144,7 @@ blockquote {
 
     @media (min-width: $screen-sm) {
         padding: 1rem 5rem;
-    }    
+    }
 
     .post {
 

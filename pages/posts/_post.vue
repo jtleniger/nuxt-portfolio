@@ -4,7 +4,7 @@
       <h1>{{post.title}}</h1>
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
-    <section>
+    <section v-if="post.thumbnail">
       <img :src="post.thumbnail" />
     </section>
     <section v-html="$md.render(post.body)">

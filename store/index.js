@@ -16,6 +16,6 @@ export const actions = {
       res.slug = key.slice(2, -5);
       return res;
     });
-    await commit('setPosts', posts);
+    await commit('setPosts', posts.sort((a, b) => new Date(b.date) - new Date(a.date)));
   },
 };
