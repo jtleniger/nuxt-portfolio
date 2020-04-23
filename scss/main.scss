@@ -73,7 +73,7 @@ h1 {
 
         .body {
             @media (min-width: $screen-sm) {
-                margin: 3em;
+                margin: 0 3em;
             }
 
             article {
@@ -102,6 +102,13 @@ h1 {
             }
         }
     }
+}
+
+blockquote {
+    background-color: #222;
+    padding: 0.1em 1em;
+    border-radius: 0.5em;
+    margin: 1em 0;
 }
 
 .hero {

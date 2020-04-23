@@ -4,11 +4,13 @@
       <h1>{{post.title}}</h1>
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
+    <section>
+      <img :src="post.thumbnail" />
+    </section>
     <section v-html="$md.render(post.body)">
     </section>
   </div>
 </template>
-
 <script>
 export default {
   async asyncData({ params, payload }) {
@@ -31,4 +33,3 @@ export default {
   }
 };
 </script>
-
