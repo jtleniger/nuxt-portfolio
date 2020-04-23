@@ -19,7 +19,7 @@
           <p>Join me on an adventure.</p>
         </div>
         <div class="post">
-          <nuxt-link to="https://tldr.photography">tldr.photography</nuxt-link>
+          <a href="https://tldr.photography" target="_blank">tldr.photography</a>
           <p>How the heck do I use my DSLR?</p>
         </div>
       </div>
