@@ -4,8 +4,7 @@
       <h1>{{post.title}}</h1>
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
-    <section>
-      {{ post.body }}
+    <section v-html="$md.render(post.body)">
     </section>
   </div>
 </template>

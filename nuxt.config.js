@@ -51,8 +51,13 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/markdownit'
   ],
+
+  markdownit: {
+    injected: true,
+  },
 
   googleAnalytics: {
     id: 'UA-138863199-1',
