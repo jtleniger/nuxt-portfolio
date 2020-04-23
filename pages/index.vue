@@ -36,7 +36,7 @@
 
 <style lang="scss" scoped>
 .hero {
-  background-image: url("~assets/img/orion.jpg");
+  background-image: url("/img/orion.jpg");
 }
 </style>
 

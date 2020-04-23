@@ -14,7 +14,6 @@
 export default {
   computed: {
     posts() {
-      debugger
       return this.$store.state.posts;
     }
   }
