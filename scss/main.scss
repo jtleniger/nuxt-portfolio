@@ -138,35 +138,3 @@ blockquote {
         text-align: center;
     }
 }
-
-.posts {
-    padding: 1rem;
-
-    @media (min-width: $screen-sm) {
-        padding: 1rem 5rem;
-    }
-
-    .post {
-
-        a {
-            display: block;
-            font-size: 2rem;
-            margin: 2rem 0 1rem 0;
-            color: $grey-500;
-
-            &:hover {
-                color: $grey-400;
-            }
-        }
-
-        &:not(:last-child) {
-            border-bottom: 1px solid $grey-900;
-        }
-
-        em {
-            display: block;
-            color: $grey-600;
-            margin: 1rem 0 2rem 0;
-        }
-    }
-}
