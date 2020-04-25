@@ -3,138 +3,143 @@
 
 $sans: 'Raleway', sans-serif;
 
+/*
+Font
+*/
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  color: $grey-400;
+  font-family: $sans;
+  font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
-html {
-    color: $grey-400;
-}
-
+/*
+Body Color
+*/
 body {
-    background-color: $dark-background;
-    font-family: $sans;
-    font-size: 16px;
-    letter-spacing: 0.01em;
-    margin: 0;
-    padding: 0;
+  background-color: $dark-background;
+  margin: 0;
+  padding: 0;
 }
 
-.page-enter-active, .page-leave-active {
-    transition: opacity 100ms ease;
+/*
+Animations
+*/
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 100ms ease;
 }
-.page-enter, .page-leave-to {
-    opacity: 0;
-}
-
-a {
-    text-decoration: none;
-    color: $purple-700;
-    outline: none;
-    transition: color 150ms ease;
-
-    &:hover {
-        color: $purple-800;
-    }
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 
+/*
+Typography
+*/
 em {
-    font-weight: 300;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
-section:not(:last-child) {
-    border-bottom: 1px solid $grey-900;
-}
+a {
+  text-decoration: none;
+  color: $purple-700;
+  outline: none;
+  transition: color 150ms ease;
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-
-    .page {
-        width: $page-width-sm;
-        flex: 1;
-
-        @media (min-width: $screen-sm) {
-            width: $page-width-lg;
-        }
-
-        background-color: $background;
-
-        .body {
-            @media (min-width: $screen-sm) {
-                margin: 0 3em;
-            }
-
-            article {
-                margin: 1em;
-                border-radius: .25em;
-                background-color: $grey-900;
-                padding: 1em;
-            }
-
-            section {
-                max-width: 960px;
-                margin: 0 auto;
-                padding: 1rem;
-            }
-
-            img {
-                max-width: 100%;
-                max-height: 90vh;
-                width: auto;
-                height: auto;
-                margin: 0 auto;
-                display: block;
-            }
-        }
-    }
+  &:hover {
+    color: $purple-800;
+  }
 }
 
 blockquote {
-    background-color: $grey-900;
-    padding: 0.1em 1em;
-    border-radius: 0.5em;
-    margin: 1em 0;
+  background-color: $grey-900;
+  padding: 0.1em 1em;
+  border-radius: 0.5em;
+  margin: 1em 0;
 }
 
-.hero {
+/*
+Page
+*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+
+  .page {
+    width: $page-width-sm;
+    flex: 1;
+
+    @media (min-width: $screen-sm) {
+      width: $page-width-lg;
+    }
+
+    background-color: $background;
+  }
+}
+
+/*
+Sections
+*/
+section {
+  &.content {
+    padding: 1rem;
+    
+    &.narrow {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+  &.hero {
     width: 100%;
     background-size: cover;
     background-position: center center;
     height: 60vh;
     display: flex;
-    
+
     h1 {
-        font-size: 5rem;
-        margin: 2rem;
-        text-align: center;
+      font-size: 5rem;
+      margin: 2rem;
+      text-align: center;
     }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $grey-900;
+  }
 }
 
 .cards {
-    @media (min-width: $screen-sm) {
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }   
+  @media (min-width: $screen-sm) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 
-    div {
-        padding: 1em;
-        margin: 1em;
-        text-align: center;
-    }
+  div {
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+  }
 }

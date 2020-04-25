@@ -1,5 +1,5 @@
 <template>
-    <div class="body">
+    <section class="content">
       <h1>I am...</h1>
       <div class="cards">
         <div>
@@ -27,7 +27,7 @@
           <p>When I'm not at work I try to get into nature as much as possible.</p>
         </div>
       </div>
-    </div>
+    </section>
 </template>
 <style lang="scss" scoped>
 body h1 {

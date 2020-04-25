@@ -3,12 +3,12 @@
     <section class="hero">
       <h1>Justin Leniger</h1>
     </section>
-    <div class="body">
+    <section class="content">
       <h2>Latest Post</h2>
       <post-link :post="latest" />
       <h2>Projects</h2>
       <post-link v-for="project in projects" :key="project.title" :post="project" />
-    </div>
+    </section>
   </div>
 </template>
 
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container .page .body {
+.container .page .content {
   h2 {
     font-weight: 300;
     padding: 1rem;

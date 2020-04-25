@@ -1,7 +1,7 @@
 <template>
-  <div class="body">
+  <section class="content">
     <post-link v-for="post in posts" :key="post.title" :post="post" />
-  </div>
+  </section>
 </template>
 
 <script>

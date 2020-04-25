@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <section class="content">
     <section>
       <h1>Suburban Safari</h1>
       <em>April 5, 2020</em>
@@ -15,7 +15,7 @@
         :style="{ backgroundImage: `url(${path})` }"
       ></div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

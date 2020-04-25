@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <section class="content narrow">
     <section>
       <h1>{{ post.title }}</h1>
       <p>{{ post.description }}</p>
@@ -10,7 +10,7 @@
     </section>
     <section v-html="$md.render(post.body)">
     </section>
-  </div>
+  </section>
 </template>
 <script>
 export default {
