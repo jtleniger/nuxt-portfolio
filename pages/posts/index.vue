@@ -1,5 +1,5 @@
 <template>
-  <section class="content">
+  <section class="content narrow">
     <post-link v-for="post in posts" :key="post.title" :post="post" />
   </section>
 </template>

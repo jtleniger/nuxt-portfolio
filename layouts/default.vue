@@ -11,7 +11,7 @@
         <nuxt />
       </div>
       <footer>
-        <p><a href="https://youtu.be/omjoa3pPpcY" target="_blank"><em>don't throw fruit at a computer</em></a></p>
+        <p><a href="https://youtu.be/omjoa3pPpcY" target="_blank">don't throw fruit at a computer</a></p>
         <p>©{{ new Date().getFullYear() }}, Justin Leniger</p>
       </footer>
     </div>

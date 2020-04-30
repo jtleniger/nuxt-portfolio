@@ -52,11 +52,15 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 h1 {
   font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
 }
 
 a {
@@ -75,6 +79,10 @@ blockquote {
   padding: 0.1em 1em;
   border-radius: 0.5em;
   margin: 1em 0;
+}
+
+p {
+  line-height: 1.5;
 }
 
 /*
@@ -104,18 +112,50 @@ Sections
 */
 section {
   &.content {
-    padding: 1rem;
-    
+    padding: 2rem;
+
     &.narrow {
       max-width: 960px;
       margin: 0 auto;
     }
+
+    &.columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 2rem;
+    }
+
+    section {
+      margin: 1rem 0;
+
+      &.main-image {
+        border: none;
+      }
+
+      &.title {
+        padding-bottom: 1rem;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $grey-900;
   }
 
   &.hero {
     width: 100%;
     background-size: cover;
     background-position: center center;
+    border: none;
     height: 60vh;
     display: flex;
 
@@ -124,22 +164,5 @@ section {
       margin: 2rem;
       text-align: center;
     }
-  }
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $grey-900;
-  }
-}
-
-.cards {
-  @media (min-width: $screen-sm) {
-    display: grid;
-    grid-template-columns: auto auto auto;
-  }
-
-  div {
-    padding: 1em;
-    margin: 1em;
-    text-align: center;
   }
 }

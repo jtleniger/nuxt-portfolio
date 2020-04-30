@@ -3,11 +3,15 @@
     <section class="hero">
       <h1>Justin Leniger</h1>
     </section>
-    <section class="content">
-      <h2>Latest Post</h2>
-      <post-link :post="latest" />
-      <h2>Projects</h2>
-      <post-link v-for="project in projects" :key="project.title" :post="project" />
+    <section class="content columns">
+      <div>
+        <h2>Latest Post</h2>
+        <post-link :post="latest" />
+      </div>
+      <div>
+        <h2>Projects</h2>
+        <post-link v-for="project in projects" :key="project.title" :post="project" />
+      </div>
     </section>
   </div>
 </template>
@@ -55,21 +59,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container .page .content {
-  h2 {
-    font-weight: 300;
-    padding: 1rem;
-  }
+@import '~/scss/colors';
 
-  .posts {
-    flex-grow: 1;
-
-    .post {
-      a {
-        margin: 1rem 0;
-      }
-    }
-  }
+h2 {
+  border-bottom: 2px solid $grey-900;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .hero {
