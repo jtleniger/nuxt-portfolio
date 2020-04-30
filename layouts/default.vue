@@ -5,12 +5,13 @@
         <nuxt-link class="home" to="/">Home</nuxt-link>
         <nuxt-link to="/posts">Posts</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/contact">Contact</nuxt-link>
       </nav>
-      <section class="page">
+      <div class="page">
         <nuxt />
-      </section>
+      </div>
       <footer>
-        <p><a href="https://youtu.be/omjoa3pPpcY" target="_blank"><em>don't throw fruit at a computer</em></a></p>
+        <p><a href="https://youtu.be/omjoa3pPpcY" target="_blank">don't throw fruit at a computer</a></p>
         <p>©{{ new Date().getFullYear() }}, Justin Leniger</p>
       </footer>
     </div>

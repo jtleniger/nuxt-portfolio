@@ -1,16 +1,16 @@
 <template>
-  <div class="body">
-    <section>
+  <section class="content narrow">
+    <section class="title">
       <h1>{{ post.title }}</h1>
       <p>{{ post.description }}</p>
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
-    <section v-if="post.thumbnail">
+    <section v-if="post.thumbnail" class="main-image">
       <img :src="post.thumbnail" />
     </section>
     <section v-html="$md.render(post.body)">
     </section>
-  </div>
+  </section>
 </template>
 <script>
 export default {

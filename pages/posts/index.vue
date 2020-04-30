@@ -1,21 +1,21 @@
 <template>
-  <div class="body">
-    <div class="posts">
-      <div v-for="post in posts" :key="post.title" class="post">
-        <nuxt-link :to="`/posts/${post.slug}`">{{ post.title }}</nuxt-link>
-        <p>{{ post.description }}</p>
-        <em>{{ new Date(post.date).toLocaleDateString() }}</em>
-      </div>
-    </div>
-  </div>
+  <section class="content narrow">
+    <h1>Posts</h1>
+    <post-link v-for="post in posts" :key="post.title" :post="post" />
+  </section>
 </template>
 
 <script>
+import PostLink from '~/components/post-link.vue'
+
 export default {
   computed: {
     posts() {
       return this.$store.state.posts;
     }
+  },
+  components: {
+    'post-link': PostLink
   }
-};
+}
 </script>
