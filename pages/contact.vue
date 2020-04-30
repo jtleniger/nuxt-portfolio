@@ -1,7 +1,7 @@
 <template>
   <section class="content narrow">
     <h1>Contact Me</h1>
-    <form name="contact" method="POST" netlify>
+    <form name="contact" method="POST" data-netlify="true" action="/thank-you">
       <input type="email" name="email" id="email" placeholder="Email" />
       <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
       <input type="submit" value="submit" />
