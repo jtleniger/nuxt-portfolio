@@ -29,9 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    { src: '~plugins/vue-gallery.client.js', ssr: false }
-  ],
+  plugins: [],
 
   generate: {
     routes: function() {
