@@ -3,18 +3,22 @@
     <section>
       <h1>Suburban Safari</h1>
       <em>April 5, 2020</em>
-      <p>A photographic exploration of suburbia in the quarantine of Spring 2020. Join me.</p>
+      <p>A photographic exploration of suburbia in of Spring 2020. Join me.</p>
     </section>
-    <div class="gallery-container">
-      <v-gallery :images="images" :index="index" @close="index = null" />
+    <section class="gallery">
       <div
-        class="image"
+        class="thumb"
         v-for="(path, i) in images"
         :key="i"
-        @click="index = i"
+        @click="openModal(i)"
         :style="{ backgroundImage: `url(${path})` }"
       ></div>
-    </div>
+    </section>
+    <transition name="page">
+      <section v-if="isOpen" class="modal" @click="closeModal()">
+        <img :src="images[index]" />
+      </section>
+    </transition>
   </section>
 </template>
 
@@ -30,25 +34,58 @@ export default {
   data: function() {
     return {
       images: [],
-      index: null
+      index: null,
+      isOpen: false
     };
+  },
+  methods: {
+    openModal: function(i) {
+      this.index = i
+      this.isOpen = true
+    },
+    closeModal: function() {
+      this.isOpen = false
+    }
   }
 };
 </script>
 
-<style scoped>
-.gallery-container {
-  display: flex;
-  justify-content: center;
-  margin: 1em 0;
-  flex-wrap: wrap;
-}
-.image {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin: 1px;
-  width: 350px;
-  height: 350px;
+<style lang="scss">
+@import '~/scss/colors';
+
+$thumb-size: 250px;
+
+section.content {
+  section.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .thumb {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 1px;
+      width: $thumb-size;
+      height: $thumb-size;
+    }
+  }
+
+  section.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 </style>
