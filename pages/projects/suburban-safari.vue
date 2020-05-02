@@ -2,8 +2,8 @@
   <section class="content">
     <section>
       <h1>Suburban Safari</h1>
-      <em>April 5, 2020</em>
       <p>A photographic exploration of suburbia in of Spring 2020. Join me.</p>
+      <share />
     </section>
     <section class="gallery">
       <div
@@ -23,7 +23,9 @@
 </template>
 
 <script>
-const IMAGE_COUNT = 6;
+import Share from '~/components/share.vue'
+
+const IMAGE_COUNT = 6
 
 export default {
   created() {
@@ -36,7 +38,7 @@ export default {
       images: [],
       index: null,
       isOpen: false
-    };
+    }
   },
   methods: {
     openModal: function(i) {
@@ -46,8 +48,11 @@ export default {
     closeModal: function() {
       this.isOpen = false
     }
+  },
+  components: {
+    share: Share
   }
-};
+}
 </script>
 
 <style lang="scss">
@@ -77,7 +82,7 @@ section.content {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: 0;
     display: flex;
     align-items: center;
