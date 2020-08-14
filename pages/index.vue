@@ -6,7 +6,7 @@
     <section class="content columns">
       <div>
         <h2>Latest Post</h2>
-        <post-link :post="latest" />
+        <!-- <post-link :post="latest" /> -->
       </div>
       <div>
         <h2>Projects</h2>
@@ -33,7 +33,7 @@ export default {
   },
   computed: {
     latest() {
-      return this.$store.state.posts[0]
+      // return this.$store.state.posts[0]
     }
   },
   components: {

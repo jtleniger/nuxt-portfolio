@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: ['~/plugins/globals.js'],
 
   generate: {
     routes: function() {
@@ -48,8 +48,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxt/content',
     '@nuxtjs/sitemap',
-    '@nuxtjs/markdownit',
     '@aceforth/nuxt-optimized-images'
   ],
 

@@ -9,9 +9,11 @@
 import PostLink from '~/components/post-link.vue'
 
 export default {
-  computed: {
-    posts() {
-      return this.$store.state.posts;
+  async asyncData({ params, $content }) {
+    const posts = await $content('posts').fetch();
+
+    return {
+      posts
     }
   },
   components: {
