@@ -6,7 +6,7 @@
     <section class="content columns">
       <div>
         <h2>Latest Post</h2>
-        <!-- <post-link :post="latest" /> -->
+        <post-link :post="latest" />
       </div>
       <div>
         <h2>Projects</h2>
@@ -20,6 +20,13 @@
 import PostLink from '~/components/post-link.vue'
 
 export default {
+  async asyncData({ params, $content }) {
+    const latest = await $content('posts').sortBy('date', 'desc').limit(1).fetch();
+
+    return {
+      latest: latest[0]
+    }
+  },
   head() {
     return {
       script: [
@@ -29,11 +36,6 @@ export default {
         { property: 'og:title', content: 'Justin Leniger' },
         { property: 'og:image', content: '/img/orion.jpg' }
       ]
-    }
-  },
-  computed: {
-    latest() {
-      // return this.$store.state.posts[0]
     }
   },
   components: {
@@ -68,6 +70,6 @@ h2 {
 }
 
 .hero {
-  background-image: url('/img/orion.jpg');
+  background-image: url('~assets/images/orion.jpg');
 }
 </style>

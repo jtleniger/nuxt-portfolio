@@ -17,7 +17,6 @@ import Share from '~/components/share.vue'
 
 export default {
   async asyncData({ params, $content }) {
-    console.log(params)
     const post = await $content('posts', params.post).fetch();
 
     return {
