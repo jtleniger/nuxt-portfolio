@@ -49,17 +49,16 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@aceforth/nuxt-optimized-images'
   ],
 
   markdownit: {
     injected: true,
   },
 
-  googleAnalytics: {
-    id: 'UA-138863199-1',
-    dev: false
+  optimizedImages: {
+    optimizeImages: true
   },
 
   /*

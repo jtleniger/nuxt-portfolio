@@ -6,14 +6,15 @@
       <share />
       <em>{{ new Date(post.date).toLocaleDateString() }}</em>
     </section>
-    <section v-if="post.thumbnail" class="main-image">
-      <img :src="post.thumbnail" />
+    <section v-if="post.hero" class="main-image">
+      <lazy-image :src="post.hero" />
     </section>
     <section v-html="$md.render(post.body)">
     </section>
   </section>
 </template>
 <script>
+import LazyImage from '~/components/lazy-image.vue'
 import Share from '~/components/share.vue'
 
 export default {
@@ -29,13 +30,14 @@ export default {
   },
   head() {
     return {
-      meta: [
-        { property: 'og:title', content: this.post.title },
-        { property: 'og:image', content: this.post.thumbnail }
-      ]
+      // meta: [
+      //   { property: 'og:title', content: this.post.title },
+      //   { property: 'og:image', content: require('~/assets/' + this.post.hero) }
+      // ]
     }
   },
   components: {
+    'lazy-image': LazyImage,
     'share': Share
   }
 };
