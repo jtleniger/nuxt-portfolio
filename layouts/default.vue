@@ -4,8 +4,8 @@
       <nav>
         <nuxt-link class="home" to="/">Home</nuxt-link>
         <nuxt-link to="/posts">Blog</nuxt-link>
-        <nuxt-link to="/contact">Contact Me</nuxt-link>
-        <nuxt-link to="/about">About Me</nuxt-link>
+        <nuxt-link to="/contact">Contact</nuxt-link>
+        <nuxt-link to="/about">About</nuxt-link>
       </nav>
       <div class="page">
         <nuxt />
