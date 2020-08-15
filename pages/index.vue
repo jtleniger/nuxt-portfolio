@@ -45,11 +45,6 @@ export default {
     return {
       projects: [
         {
-          'title': 'Suburban Safari',
-          'route': '/projects/suburban-safari',
-          'description': 'Join me on an adventure.'
-        },
-        {
           'title': 'tldr.photography',
           'href': 'https://tldr.photography',
           'description': 'How the heck do I use my DSLR?'
