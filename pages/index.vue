@@ -6,8 +6,8 @@
     </section>
     <section class="content columns">
       <div>
-        <h2>Latest Blog Post</h2>
-        <post-link :post="latest" />
+        <h2>Latest posts</h2>
+        <post-link v-for="post in latest" :key="post.title" :post="post" />
       </div>
       <div>
         <h2>Projects</h2>
@@ -22,10 +22,10 @@ import PostLink from '~/components/post-link.vue'
 
 export default {
   async asyncData({ params, $content }) {
-    const latest = await $content('posts').sortBy('date', 'desc').limit(1).fetch();
+    const latest = await $content('posts').sortBy('date', 'desc').limit(3).fetch();
 
     return {
-      latest: latest[0]
+      latest
     }
   },
   head() {
