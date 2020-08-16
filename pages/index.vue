@@ -5,7 +5,7 @@
     </section>
     <section class="content columns">
       <div>
-        <h2>Latest Post</h2>
+        <h2>Latest Blog Post</h2>
         <post-link :post="latest" />
       </div>
       <div>
@@ -30,7 +30,7 @@ export default {
   head() {
     return {
       script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js', defer: 'true' }
       ],
       meta: [
         { property: 'og:title', content: 'Justin Leniger' },
@@ -44,11 +44,6 @@ export default {
   data: function() {
     return {
       projects: [
-        {
-          'title': 'Suburban Safari',
-          'route': '/projects/suburban-safari',
-          'description': 'Join me on an adventure.'
-        },
         {
           'title': 'tldr.photography',
           'href': 'https://tldr.photography',
