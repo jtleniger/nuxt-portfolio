@@ -109,17 +109,8 @@ Sections
 section {
   &.content {
     padding: 2rem;
-
-    &.narrow {
-      max-width: $content-width;
-      margin: 0 auto;
-    }
-
-    &.columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      grid-gap: 2rem;
-    }
+    max-width: $content-width;
+    margin: 0 auto;
 
     section {
       margin: 1rem 0;
@@ -165,5 +156,9 @@ section {
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  h2:not(:first-child) {
+    margin-top: 3rem;
   }
 }

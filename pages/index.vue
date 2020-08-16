@@ -4,15 +4,11 @@
       <h1>Justin Leniger</h1>
       <lazy-image src="orion.jpg" />
     </section>
-    <section class="content columns">
-      <div>
-        <h2>Latest posts</h2>
-        <post-link v-for="post in latest" :key="post.title" :post="post" />
-      </div>
-      <div>
-        <h2>Projects</h2>
-        <post-link v-for="project in projects" :key="project.title" :post="project" />
-      </div>
+    <section class="content">
+      <h2>Latest posts</h2>
+      <post-link v-for="post in latest" :key="post.title" :post="post" />
+      <h2>Projects</h2>
+      <post-link v-for="project in projects" :key="project.title" :post="project" />
     </section>
   </div>
 </template>
@@ -35,7 +31,7 @@ export default {
       ],
       meta: [
         { property: 'og:title', content: 'Justin Leniger' },
-        { property: 'og:image', content: '/img/orion.jpg' }
+        { property: 'og:image', content: require('~/assets/images/orion.jpg') }
       ]
     }
   },
@@ -48,7 +44,7 @@ export default {
         {
           'title': 'tldr.photography',
           'href': 'https://tldr.photography',
-          'description': 'How the heck do I use my DSLR?'
+          'description': 'How do i use manual mode on my DSLR?'
         }
       ]
     }
