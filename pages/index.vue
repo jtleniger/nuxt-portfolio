@@ -2,6 +2,7 @@
   <div>
     <section class="hero">
       <h1>Justin Leniger</h1>
+      <lazy-image src="orion.jpg" />
     </section>
     <section class="content columns">
       <div>
@@ -54,17 +55,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@import '~/scss/colors';
-
-h2 {
-  border-bottom: 2px solid $grey-900;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-}
-
-.hero {
-  background-image: url('~assets/images/orion.jpg');
-}
-</style>

@@ -149,16 +149,21 @@ section {
 
   &.hero {
     width: 100%;
-    background-size: cover;
-    background-position: center center;
     border: none;
     height: 60vh;
-    display: flex;
+    overflow: hidden;
 
     h1 {
       font-size: 4rem;
       margin: 2rem;
       text-align: center;
+      position: absolute;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
