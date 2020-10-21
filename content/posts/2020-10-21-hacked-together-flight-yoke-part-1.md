@@ -2,7 +2,7 @@
 title: Hacked Together Flight Yoke - Part 1
 date: 2020-10-21T06:01:56.684Z
 description: Building a Flight Yoke From Junk
-hero: /assets/images/joystick-electronics.jpg
+hero: joystick-electronics.jpg
 ---
 # Flight Simulators are Cool. Hardware is Expensive.
 
