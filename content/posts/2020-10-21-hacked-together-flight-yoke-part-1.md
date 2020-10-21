@@ -10,7 +10,7 @@ All of the tankers flying around lately reminded me that I like airplanes, and f
 
 ## Disassembly
 
-First, let's take the thing apart. Pictured above, there's not a whole lot inside of it. There's a main board that sends some stuff to the computer via USB, and a bunch of momentary switches and potentiometers (or encoders, but I doubt that, and it doesn't matter for this project.
+First, let's take the thing apart. Pictured above, there's not a whole lot inside of it. There's a main board that sends some stuff to the computer via USB, and a bunch of momentary switches and potentiometers (or encoders, but I doubt that, and it doesn't matter for this project).
 
 ## Planning
 
