@@ -1,5 +1,5 @@
 ---
-title: Hacked Together Flight Yoke - Part 1
+title: Hacked Together Flight Yoke - Part 2
 date: 2020-10-23T07:00:43.520Z
 description: Too Much CAD
 hero: 3dprinter.jpg
