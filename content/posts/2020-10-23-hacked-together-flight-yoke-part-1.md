@@ -2,7 +2,7 @@
 title: Hacked Together Flight Yoke - Part 1
 date: 2020-10-23T07:00:43.520Z
 description: Too Much CAD
-hero: /assets/images/3dprinter.jpg
+hero: 3dprinter.jpg
 ---
 # Gear Testing
 
