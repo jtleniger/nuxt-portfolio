@@ -24,7 +24,7 @@ Last, I modeled some cutouts for an M3 screw and nut in the final gear in the ge
 
 Here's a test fit of just the pitch gear train:
 
-<lazy-image src="gear-train.png"></lazy-image>
+<lazy-image src="IMG_1831.jpg"></lazy-image>
 
 ## Potentiometers
 
@@ -58,7 +58,7 @@ I modeled a collar that can be held in place with an M4 screw and nut to prevent
 
 Here's a test fit of the parts I've printed or purchased so far:
 
-<lazy-image src="test-fit-1.png"></lazy-image>
+<lazy-image src="IMG_1833.jpg"></lazy-image>
 
 ## Next Steps
 
