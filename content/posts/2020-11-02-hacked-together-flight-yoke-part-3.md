@@ -2,7 +2,7 @@
 title: Hacked Together Flight Yoke - Part 3
 date: 2020-11-02T05:20:16.873Z
 description: Parts, Problems, and Perseverance
-hero: IMG_1832.jpg
+hero: img_1832.jpg
 ---
 # Parts!
 
@@ -24,7 +24,7 @@ Last, I modeled some cutouts for an M3 screw and nut in the final gear in the ge
 
 Here's a test fit of just the pitch gear train:
 
-<lazy-image src="IMG_1831.jpg"></lazy-image>
+<lazy-image src="img_1831.jpg"></lazy-image>
 
 ## Potentiometers
 
@@ -58,7 +58,7 @@ I modeled a collar that can be held in place with an M4 screw and nut to prevent
 
 Here's a test fit of the parts I've printed or purchased so far:
 
-<lazy-image src="IMG_1833.jpg"></lazy-image>
+<lazy-image src="img_1833.jpg"></lazy-image>
 
 ## Next Steps
 
