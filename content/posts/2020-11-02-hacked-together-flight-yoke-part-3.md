@@ -2,7 +2,7 @@
 title: Hacked Together Flight Yoke - Part 3
 date: 2020-11-02T05:20:16.873Z
 description: Parts, Problems, and Perseverance
-hero: joystick-electronics.jpg
+hero: IMG_1832.jpg
 ---
 # Parts!
 
