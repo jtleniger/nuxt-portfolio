@@ -22,11 +22,15 @@ I also modeled another gear train for the roll axis. It's geared down so the yok
 
 Last, I modeled some cutouts for an M3 screw and nut in the final gear in the gear train. I messed this design up a few times and didn't leave enough room to actually get the screw in, which resulted in a few throwaway prints, but I finally got it working.
 
+Here's a test fit of just the pitch gear train:
+
+<lazy-image src="gear-train.png"></lazy-image>
+
 ## Potentiometers
 
 I modeled a nice slot for the potentiometers to sit in, which should be a fairly tight friction fit. Instead of adding a linkage that goes on the end of the axles (red in the screenshot from the [last post](https://justinleniger.com/posts/2020-10-23-hacked-together-flight-yoke-part-2)), I modeled one that fits inside the axle, and used an M3 screw to lock it in place.
 
-<lazy-image src="linkage".png"></lazy-image>
+<lazy-image src="linkage.png"></lazy-image>
 
 ## Mounting
 
@@ -34,7 +38,7 @@ I bought some nice-ish looking wood to mount this ridiculous thing in, and then 
 
 The holes were far enough out of square that the linear bearings binded completely, and their locations on the wood were off enough that both ends couldn't fit at the same time. I filled the holes with some dowel and then slept on it (for a few days).
 
-My next approach, effectiveness TBD, is 3d printing some flanges. I ordered some flexible filament for another part of this design, so for the flanges, I also printed some "bushings", to hopefully allow some tolerance with respect to "squareness" and position. They're the orange parts in the picture above.
+My next approach, effectiveness TBD, is 3d printing some flanges. I ordered some flexible filament for another part of this design, so for the flanges, I also printed some "bushings", to hopefully allow some tolerance with respect to "squareness" and position. They're the orange parts in the part layout photo.
 
 ## Roll Limiter
 
@@ -44,17 +48,23 @@ I'd like to make some "bumpers" with the flexible filament so the stop is smooth
 
 ## Yoke Shaft
 
-Haven't printed anything for the shaft itself yet either, but I decided on a 15mm alumninum tube. Tube is light, and alumnium is easy to drill, and 15mm bearings are cheap. 
+Haven't printed anything for the shaft itself yet either, but I decided on a 15mm alumninum tube. Tube is light, and aluminum is easy to drill, and 15mm bearings are cheap. 
 
 I modeled a collar that can be held in place with an M4 screw and nut to prevent the shaft from slipping out of the bearings:
 
-<lazy-image src="linkage".png"></lazy-image>
+<lazy-image src="collar.png"></lazy-image>
+
+## Test Fit
+
+Here's a test fit of the parts I've printed or purchased so far:
+
+<lazy-image src="test-fit-1.png"></lazy-image>
 
 ## Next Steps
 
 1. Figure out whether the "flange" strategy will work for mounting the rods.
 2. Print the rack.
-3. Print the roll gearset.
+3. Print the roll gear train.
 4. Settle on a design for the roll limiter.
 5. Test fit everything.
 6. Figure out something for "returning to center". I think I'll probably just use some weak springs for this, but I'm not sure whether that's the best option or how it will work.
